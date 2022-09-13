@@ -4,6 +4,7 @@
     "es2021": true,
     "jest": true
   },
+
   "extends": [
     "plugin:react/recommended",
     "airbnb",
@@ -18,7 +19,14 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "prettier/prettier": "error",
+    "endOfLine": "auto",
     "arrow-body-style": "off",
     "prefer-arrow-callback": "off"
-  }
+  },
+  "prettier/prettier": [
+    "error",
+    {
+      "endOfLine": "auto"
+    }
+  ]
 }
