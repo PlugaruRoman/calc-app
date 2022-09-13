@@ -3,8 +3,6 @@ import Input from "../atoms/Input";
 import MainButtons from "../molecules/MainButtons";
 import FuncButtons from "../molecules/FuncButtons";
 const ControlPanel = () => {
-  // const [count, setCount] = React.useState("0");
-
   return (
     <div className="panel">
       <div className="inputpanel">

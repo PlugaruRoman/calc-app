@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import appContext from "../../context";
 
 const FuncButton = ({ num }) => {
-  const { count, setCount, calculate } = useContext(appContext);
+  const { count, setCount, calculate, clearCount } = useContext(appContext);
   const newFn = () => {
     setCount([...count, num]);
   };

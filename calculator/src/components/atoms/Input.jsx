@@ -1,11 +1,13 @@
 import { React, useContext } from "react";
 import appContext from "../../context";
 const Input = () => {
-  const { count } = useContext(appContext);
+  const { count, result, clearCount } = useContext(appContext);
 
   return (
     <div>
-      <div className="display">{count}</div>
+      <div onClick={() => clearCount()} className="display">
+        {result ? result : count}
+      </div>
     </div>
   );
 };

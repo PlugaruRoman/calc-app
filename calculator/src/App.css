@@ -36,12 +36,24 @@
   color: rgb(255, 255, 255);
   font-size: 30px;
 }
+.button:hover {
+  background: rgb(70, 67, 67);
+}
+.button:active {
+  background: rgb(24, 21, 21);
+}
 .clearbutton {
   font-size: 30px;
   color: rgb(255, 255, 255);
   height: 80px;
   width: 198px;
   background: rgb(120, 119, 119);
+}
+.clearbutton:hover {
+  background: rgb(70, 67, 67);
+}
+.clearbutton:active {
+  background: rgb(24, 21, 21);
 }
 .funcbutton {
   background: rgb(255, 68, 68);
@@ -50,6 +62,12 @@
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-size: 30px;
+}
+.funcbutton:hover {
+  background: rgb(204, 9, 9);
+}
+.funcbutton:active {
+  background: rgb(255, 0, 0);
 }
 .buttonpanel {
   display: flex;

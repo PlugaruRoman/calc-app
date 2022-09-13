@@ -12,18 +12,23 @@ function App() {
     setCount((prev) => prev + e.target);
   };
 
+  const clearCount = () => {
+    setCount("");
+    setResult("");
+  };
+
   const calculate = () => {
     setResult(eval(count.join("")));
-    setCount("");
   };
+
   return (
-    <appContext.Provider value={{ count, setCount, handleClick, calculate }}>
+    <appContext.Provider
+      value={{ count, setCount, handleClick, calculate, result, clearCount }}
+    >
       <div className="app">
         <div className="calculator">
           <ControlPanel />
         </div>
-
-        <div>{result}</div>
       </div>
     </appContext.Provider>
   );
