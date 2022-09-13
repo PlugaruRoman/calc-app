@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import appContext from "../../context";
 
 const ClearButton = () => {
-  const { setCount, clearCount } = useContext(appContext);
+  const { clearCount } = useContext(appContext);
 
   return (
     <div>
