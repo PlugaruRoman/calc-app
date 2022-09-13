@@ -14,16 +14,15 @@ function App() {
 
   const calculate = () => {
     setResult(eval(count.join("")));
-
-    setCount(result);
+    setCount("");
   };
   return (
-    <appContext.Provider value={{ count, setCount, handleClick }}>
+    <appContext.Provider value={{ count, setCount, handleClick, calculate }}>
       <div className="app">
         <div className="calculator">
           <ControlPanel />
         </div>
-        <button onClick={calculate}>resolve</button>
+
         <div>{result}</div>
       </div>
     </appContext.Provider>
