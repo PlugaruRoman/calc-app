@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+.calculator {
+  margin: 50px auto;
+  width: 300px;
+  height: 500px;
+  border: 2px solid black;
+  text-align: center;
+  background: rgb(128, 128, 128);
+  color: rgb(255, 255, 255);
+}
+.display {
+  display: flex;
+  align-items: center;
+  text-align: end;
+  margin: 10px 0px 10px 11px;
+  width: 90%;
+  height: 70px;
+  font-size: 65px;
+  border: 2px solid black;
+  background: rgb(96, 86, 86);
+  color: rgb(255, 255, 255);
+}
+
+.buttonpanel {
+  display: flex;
+  .leftbutton {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px solid black;
+    width: 200px;
+    height: 400px;
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      width: 250px;
+      height: 250px;
+      .button {
+        height: 107px;
+        width: 66px;
+        background: rgb(120, 119, 119);
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        &:hover {
+          background: rgb(70, 67, 67);
+        }
+        &:active {
+          background: rgb(24, 21, 21);
+        }
+      }
+    }
+    .clearbutton {
+      font-size: 30px;
+      color: rgb(255, 255, 255);
+      height: 80px;
+      width: 198px;
+      background: rgb(120, 119, 119);
+      &:hover {
+        background: rgb(70, 67, 67);
+      }
+      &:active {
+        background: rgb(24, 21, 21);
+      }
+    }
+  }
+  .rightbutton {
+    display: flex;
+    margin: 2px solid black;
+    width: 100px;
+    height: 400px;
+    .funcbutton {
+      background: rgb(255, 68, 68);
+      height: 80px;
+      width: 98px;
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      font-size: 30px;
+      &:hover {
+        background: rgb(204, 9, 9);
+      }
+      &:active {
+        background: rgb(255, 0, 0);
+      }
+    }
+  }
+}

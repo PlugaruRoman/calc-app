@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import appContext from "./context";
 import ControlPanel from "./components/organism/ControlPanel";
 
