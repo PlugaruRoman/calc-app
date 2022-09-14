@@ -2,7 +2,8 @@ import React from "react";
 import Input from "../atoms/Input";
 import MainButtons from "../molecules/MainButtons";
 import FuncButtons from "../molecules/FuncButtons";
-const ControlPanel = () => {
+
+function ControlPanel() {
   return (
     <div className="panel">
       <div className="inputpanel">
@@ -18,6 +19,6 @@ const ControlPanel = () => {
       </div>
     </div>
   );
-};
+}
 
 export default ControlPanel;

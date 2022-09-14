@@ -1,13 +1,14 @@
 import { React, useContext } from "react";
 import appContext from "../../context";
-const Input = () => {
+
+function Input() {
   const { count, result } = useContext(appContext);
 
   return (
     <div>
-      <div className="display">{result ? result : count}</div>
+      <div className="display">{result || count}</div>
     </div>
   );
-};
+}
 
 export default Input;

@@ -1,15 +1,15 @@
 import FuncButton from "../atoms/FuncButton";
 
-const FuncButtons = () => {
-  let funcButtons = ["/", "*", "+", "-", "="];
+function FuncButtons() {
+  const funcButtons = ["/", "*", "+", "-", "="];
 
   return (
     <div className="buttons">
-      {funcButtons.map((el, index) => (
-        <FuncButton key={index} num={el} />
+      {funcButtons.map((el) => (
+        <FuncButton key={el} num={el} />
       ))}
     </div>
   );
-};
+}
 
 export default FuncButtons;

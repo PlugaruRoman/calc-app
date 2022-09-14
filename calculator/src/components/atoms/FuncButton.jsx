@@ -1,7 +1,7 @@
 import { React, useContext } from "react";
 import appContext from "../../context";
 
-const FuncButton = ({ num }) => {
+function FuncButton({ num }) {
   const { count, setCount, calculate } = useContext(appContext);
 
   const newFn = () => {
@@ -10,11 +10,15 @@ const FuncButton = ({ num }) => {
 
   return (
     <div>
-      <button onClick={num == "=" ? calculate : newFn} className="funcbutton">
+      <button
+        type="submit"
+        onClick={num === "=" ? calculate : newFn}
+        className="funcbutton"
+      >
         {num}
       </button>
     </div>
   );
-};
+}
 
 export default FuncButton;
