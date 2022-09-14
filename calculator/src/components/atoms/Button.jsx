@@ -1,18 +1,16 @@
 import { React, useContext } from "react";
 import appContext from "../../context";
 
-function Button({ num }) {
-  const { count, setCount } = useContext(appContext);
-  const newFn = () => {
-    setCount([...count, num]);
-  };
+const Button = ({ num }) => {
+  const { onButtonClick } = useContext(appContext);
+
   return (
     <div>
-      <button type="submit" onClick={newFn} className="button">
+      <button onClick={() => onButtonClick(num)} className="button">
         {num}
       </button>
     </div>
   );
-}
+};
 
 export default Button;

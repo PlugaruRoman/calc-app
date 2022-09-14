@@ -1,51 +1,35 @@
 /* eslint-disable no-eval */
-import { React, useState, useMemo } from "react";
+import { React, useState } from "react";
 import appContext from "./context";
+import ControlPanel from "./components/molecules/ControlPanel";
 import "./App.scss";
-import ControlPanel from "./components/organism/ControlPanel";
 
-function AppContextProvider({ children }) {
+const App = () => {
   const [count, setCount] = useState("");
-  const [result, setResult] = useState("");
 
-  const handleClick = (e) => {
-    setCount((prev) => prev + e.target);
+  const onButtonClick = (e) => {
+    setCount((prev) => prev + e);
   };
 
   const calculate = () => {
-    setCount(setResult(eval(count.join(""))));
+    setCount(eval(count));
   };
 
   const clearCount = () => {
     setCount("");
-    setResult("");
   };
 
-  const value = useMemo(
-    () => ({
-      count,
-      setCount,
-      result,
-      setResult,
-      handleClick,
-      clearCount,
-      calculate,
-    }),
-    [count]
-  );
-
-  return <appContext.Provider value={value}>{children}</appContext.Provider>;
-}
-function App() {
   return (
-    <AppContextProvider>
+    <appContext.Provider
+      value={{ clearCount, calculate, onButtonClick, count, setCount }}
+    >
       <div className="app">
         <div className="calculator">
           <ControlPanel />
         </div>
       </div>
-    </AppContextProvider>
+    </appContext.Provider>
   );
-}
+};
 
 export default App;
